@@ -41,13 +41,13 @@ const Login = () => {
             <br/>
             <div class="flex items-center justify-between">
               <button
-                className="bg-green-500 hover:bg-blue-700 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline"
+                className="bg-green-500 hover:bg-yellow-300 text-white font-bold py-2 px-10 rounded focus:outline-none focus:shadow-outline"
                 type="button"
               >
-                Sign In
+                เข้าสู่ระบบ
               </button>
-              <a class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-blue-800" href="#">
-              Register
+              <a class="inline-block align-baseline font-bold text-sm text-green-500 hover:text-yellow-300" href="/Register">
+              ลงทะเบียน
       </a>
             </div>
           </form>

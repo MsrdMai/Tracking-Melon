@@ -37,13 +37,13 @@ function Navigations() {
           <Nav.Link href="/">รายการขาย</Nav.Link>
           <Nav.Link href=""></Nav.Link>
 
-          <Nav.Link href="">รายการจอง</Nav.Link>
+          <Nav.Link href="/">รายการจอง</Nav.Link>
           <Nav.Link href=""></Nav.Link>
 
-          <Nav.Link href="">ฟาร์ม</Nav.Link>
+          <Nav.Link href="/">ฟาร์ม</Nav.Link>
           <Nav.Link href=""></Nav.Link>
 
-          <Nav.Link href=""></Nav.Link>
+        
 
           <a
                 class="btn btn-light my-2 my-sm-0 btn-lg btn-block  bg-green-400 text-white"

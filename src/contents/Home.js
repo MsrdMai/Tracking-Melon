@@ -3,8 +3,9 @@ import Topnav from '../components/Topnav'
 import meron2 from "../assets/meron2.jpg";
 import "bootstrap/dist/css/bootstrap.min.css";
 
-const Home = () => {
-
+class Home extends Component {
+    render() {
+        
     return(
         <div>
         <Topnav />
@@ -36,4 +37,5 @@ const Home = () => {
 
 );
 }
+};
 export default Home;
