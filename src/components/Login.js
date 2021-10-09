@@ -2,6 +2,9 @@ import React, { useState } from "react";
 import Topnav from "../components/Topnav";
 
 const Login = () => {
+
+ 
+
   return (
     <div>
       <Topnav />
@@ -21,6 +24,7 @@ const Login = () => {
                 id=""
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
                 placeholder="Johnbull@example.com"
+                required
               />
             </div>
             <div className="px-4 pb-4">
@@ -36,6 +40,7 @@ const Login = () => {
                 id=""
                 className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
                 placeholder="Enter your password"
+                required
               />
             </div>
             <br/>
