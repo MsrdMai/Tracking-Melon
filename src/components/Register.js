@@ -150,7 +150,7 @@ const Register = () => {
                           type="radio"
                           class="form-radio"
                           name="accountType"
-                          value="personal"
+                          value={val.Typeuser_id}
                           
                         />
                         <span class="ml-6">
