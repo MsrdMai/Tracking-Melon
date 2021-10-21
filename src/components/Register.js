@@ -6,19 +6,28 @@ import Axios from "axios";
 
 const Register = () => {
   const [type_userList, setType_userList] = useState([]);
-
-  useEffect(() => {
-    Axios.get("http://localhost:3001/type_user").then((response) => {
-      setType_userList(response.data);
-    });
-  });
-
+  const [user_type, setuser_type] = useState()
   const [values, setValues] = useState({
     username: "",
     email: "",
     password: "",
-    phone: ""
+    phone: "",
   });
+
+  Axios.get("http://localhost:3001/type_user").then((response) => {
+    setType_userList(response.data);
+  });
+
+  const SaveRegister = (event) => {
+    Axios.post('http://localhost:3001/user', {
+    email: values.email,
+    username:values.username, 
+    password:values.password, 
+    phone_user:values.phone, 
+    Typeuser_id:user_type, }).then((response)=> {
+    console.log(response);
+  })
+}
 
   const [errors, setErrors] = useState({});
 
@@ -141,27 +150,28 @@ const Register = () => {
                   ประเภทผู้ใช้งาน
                 </label>
 
-                
+                 <div class="px-3 pb-3">
                   {type_userList.map((val, key) => {
+                
+
                     return (
-                      <div class="px-6 pb-6">
-                       <label class="inline-flex items-center">
-                        <input
+                    <label class="flex items-stretch">
+                     <input
                           type="radio"
                           class="form-radio"
                           name="accountType"
                           value={val.Typeuser_id}
-                          
+                          onChange={(e)=> setuser_type(e.target.value)}
+                        
                         />
                         <span class="ml-6">
                         {val.typeuser_name} 
-                        </span>
-                      </label>
-                      
-                       </div>
-                    );
-                  })}
+                        </span> 
+                      </label>  
+                   )
 
+                  })}
+ </div>
                 
                
               </div>
@@ -174,6 +184,7 @@ const Register = () => {
                 <button
                   class="shadow bg-green-500 hover:bg-yellow-300 focus:shadow-outline focus:outline-none text-white font-bold py-2 px-4 rounded"
                   type="submit"
+                  onClick={SaveRegister}
                 >
                   ยืนยัน
                 </button>
