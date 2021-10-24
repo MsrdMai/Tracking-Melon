@@ -1,12 +1,13 @@
 import React, { useState, useEffect} from "react";
 import Topnav from "../components/Topnav";
-import validation from "../components/validate";
+import {validationRegister} from "../components/validate";
 import Axios from "axios";
-
+import SweetAlert from 'react-bootstrap-sweetalert';
 
 const Register = () => {
   const [type_userList, setType_userList] = useState([]);
   const [user_type, setuser_type] = useState()
+  const [isRedirect, setRedirect] = useState(false)
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -18,17 +19,38 @@ const Register = () => {
     setType_userList(response.data);
   });
 
+
+const getData = () => {
+  return(
+    <SweetAlert
+      success
+      title="Success!"
+      confirmBtnBsStyle="success"
+      onConfirm={() => this.setRedirect({ isRedirect: true })}
+    >
+      ลงทะเบียนเรียบร้อย
+    </SweetAlert>)}
+    
+
   const SaveRegister = (event) => {
+
     Axios.post('http://localhost:3001/user', {
     email: values.email,
     username:values.username, 
     password:values.password, 
     phone_user:values.phone, 
     Typeuser_id:user_type, }).then((response)=> {
-    console.log(response);
-  })
+    
+  }),
+  <SweetAlert
+  success
+  title="Success!"
+  confirmBtnBsStyle="success"
+  onConfirm={() => this.setRedirect({ isRedirect: true })}
+>
+  ลงทะเบียนเรียบร้อย
+</SweetAlert>
 }
-
   const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
@@ -40,7 +62,7 @@ const Register = () => {
 
   const handleSubmit = (event) => {
     event.preventDefault();
-    setErrors(validation(values));
+    setErrors(validationRegister(values));
   };
 
   return (
@@ -49,6 +71,7 @@ const Register = () => {
 
       <section className="App h-screen w-full flex justify-center items-center bg-yellow-200">
         <div className="w-full max-w-md">
+        
           <form
             onSubmit={handleSubmit}
             action=""

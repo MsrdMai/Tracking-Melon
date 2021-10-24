@@ -14,13 +14,19 @@ const db = mysql.createConnection({
 })
 
 
-app.get('/user', (req, res) => {
-    db.query("SELECT * FROM user", (err, result) => {
+app.post('/IntoLogin', (req, res) => {
+
+    const username = req.body.username
+    const password = req.body.password
+
+    db.query("SELECT * FROM user WHERE username = ? AND password = ?", (err, result) => {
         if (err){
             console.log(err);
         }
-        else{
+        if(result){
             res.send(result);
+        } else {
+            res.send({message : "Wrong username or password"})
         }
     });
 });
@@ -38,7 +44,7 @@ app.get('/type_user', (req, res) => {
 });
 
 
-app.post('/user', (req,res)=> {
+app.post('/SaveRegister', (req,res)=> {
 
     const email = req.body.email
     const username = req.body.username
