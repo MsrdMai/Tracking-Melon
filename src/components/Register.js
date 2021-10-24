@@ -8,6 +8,7 @@ const Register = () => {
   const [type_userList, setType_userList] = useState([]);
   const [user_type, setuser_type] = useState()
   const [isRedirect, setRedirect] = useState(false)
+  const [isOpen, setOpen] = useState(false);
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -20,16 +21,8 @@ const Register = () => {
   });
 
 
-const getData = () => {
-  return(
-    <SweetAlert
-      success
-      title="Success!"
-      confirmBtnBsStyle="success"
-      onConfirm={() => this.setRedirect({ isRedirect: true })}
-    >
-      ลงทะเบียนเรียบร้อย
-    </SweetAlert>)}
+
+
     
 
   const SaveRegister = (event) => {
@@ -38,18 +31,10 @@ const getData = () => {
     email: values.email,
     username:values.username, 
     password:values.password, 
-    phone_user:values.phone, 
-    Typeuser_id:user_type, }).then((response)=> {
-    
-  }),
-  <SweetAlert
-  success
-  title="Success!"
-  confirmBtnBsStyle="success"
-  onConfirm={() => this.setRedirect({ isRedirect: true })}
->
-  ลงทะเบียนเรียบร้อย
-</SweetAlert>
+    phone_user:values.phone,
+    Typeuser_id:user_type,})
+    setOpen(true);
+
 }
   const [errors, setErrors] = useState({});
 
@@ -58,6 +43,7 @@ const getData = () => {
       ...values,
       [event.target.name]: event.target.value,
     });
+    
   };
 
   const handleSubmit = (event) => {
@@ -71,10 +57,16 @@ const getData = () => {
 
       <section className="App h-screen w-full flex justify-center items-center bg-yellow-200">
         <div className="w-full max-w-md">
-        
+            <SweetAlert
+            success
+            show={isOpen}
+            title="Success!"
+            confirmBtnBsStyle="success"
+            onConfirm={() => {setOpen(false)}}>
+            ลงทะเบียนเรียบร้อย
+          </SweetAlert>      
           <form
             onSubmit={handleSubmit}
-            action=""
             className=" bg-white shadow-md rounded px-8 py-8 pt-14"
           >
             <p class="text-3xl">ลงทะเบียน</p>

@@ -32,7 +32,7 @@ app.post('/IntoLogin', (req, res) => {
 });
 
 
-app.get('/type_user', (req, res) => {
+app.get('/Register', (req, res) => {
     db.query("SELECT * FROM type_user", (err, result) => {
         if (err){
             console.log(err);
