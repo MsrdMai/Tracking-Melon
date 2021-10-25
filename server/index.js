@@ -9,7 +9,7 @@ app.use(express.json());
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "maimsrd",
+    password: "ploy30725",
     database: "melon_system"
 })
 
@@ -32,7 +32,7 @@ app.post('/IntoLogin', (req, res) => {
 });
 
 
-app.get('/Register', (req, res) => {
+app.get('/type_user', (req, res) => {
     db.query("SELECT * FROM type_user", (err, result) => {
         if (err){
             console.log(err);
