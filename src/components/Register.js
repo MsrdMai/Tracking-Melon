@@ -3,6 +3,9 @@ import Topnav from "../components/Topnav";
 import {validationRegister} from "../components/validate";
 import Axios from "axios";
 import SweetAlert from 'react-bootstrap-sweetalert';
+import { Route, Redirect } from "react-router-dom";
+import Login from '../components/Login';
+
 
 const Register = () => {
   const [type_userList, setType_userList] = useState([]);
@@ -21,20 +24,34 @@ const Register = () => {
   });
 
 
-
-
-    
-
   const SaveRegister = (event) => {
 
-    Axios.post('http://localhost:3001/user', {
+    Axios.post('http://localhost:3001/SaveRegister', {
     email: values.email,
     username:values.username, 
     password:values.password, 
     phone_user:values.phone,
     Typeuser_id:user_type,})
     setOpen(true);
+  
+}
 
+const reDirect = () => {
+  setOpen(false);
+  setRedirect(true);
+  setValues({
+    username: "",
+    email: "",
+    password: "",
+    phone: "",
+  });
+  setuser_type();
+  if(isRedirect === true){
+    return (
+     <Redirect to='/login'  />
+    )
+    }
+  }
 }
   const [errors, setErrors] = useState({});
 
@@ -51,6 +68,7 @@ const Register = () => {
     setErrors(validationRegister(values));
   };
 
+
   return (
     <div>
       <Topnav />
@@ -62,9 +80,9 @@ const Register = () => {
             show={isOpen}
             title="Success!"
             confirmBtnBsStyle="success"
-            onConfirm={() => {setOpen(false)}}>
+            onConfirm={reDirect}>
             ลงทะเบียนเรียบร้อย
-          </SweetAlert>      
+          </SweetAlert>
           <form
             onSubmit={handleSubmit}
             className=" bg-white shadow-md rounded px-8 py-8 pt-14"

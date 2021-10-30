@@ -12,7 +12,7 @@ const Login = () => {
 
   const IntoLogin = (event) => {
     Axios.post(
-      "http://localhost:3001/user",
+      "http://localhost:3001/IntoLogin",
       {
         username: data.username,
         password: data.password,

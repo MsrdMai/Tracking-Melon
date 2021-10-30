@@ -3,13 +3,14 @@ const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
 
+
 app.use(cors());
 app.use(express.json());
 
 const db = mysql.createConnection({
     user: "root",
     host: "localhost",
-    password: "ploy30725",
+    password: "Maimsrd",
     database: "melon_system"
 })
 
@@ -19,7 +20,7 @@ app.post('/IntoLogin', (req, res) => {
     const username = req.body.username
     const password = req.body.password
 
-    db.query("SELECT * FROM user WHERE username = ? AND password = ?", (err, result) => {
+    db.query("SELECT * FROM users WHERE username = ? AND password = ?", (err, result) => {
         if (err){
             console.log(err);
         }
@@ -44,6 +45,17 @@ app.get('/type_user', (req, res) => {
 });
 
 
+app.get('/Getusers', (req, res) => {
+    db.query("SELECT * FROM users", (err, result) => {
+        if (err){
+            console.log(err);
+        }
+        else{
+            res.send(result);
+        }
+    });
+});
+
 app.post('/SaveRegister', (req,res)=> {
 
     const email = req.body.email
@@ -51,7 +63,7 @@ app.post('/SaveRegister', (req,res)=> {
     const password = req.body.password
     const phone_user = req.body.phone_user
     const Typeuser_id = req.body.Typeuser_id
-    db.query("INSERT INTO user (email, username, password, phone_user, Typeuser_id) VALUES (?,?,?,?,?)", 
+    db.query("INSERT INTO users (email, username, password, phone_user, Typeuser_id) VALUES (?,?,?,?,?)", 
     [email, username, password, phone_user, Typeuser_id], (err, result) => {
 
             console.log(err);
