@@ -3,9 +3,7 @@ import Topnav from "../components/Topnav";
 import {validationRegister} from "../components/validate";
 import Axios from "axios";
 import SweetAlert from 'react-bootstrap-sweetalert';
-import { Route, Redirect } from "react-router-dom";
-import Login from '../components/Login';
-
+import { Redirect } from "react-router-dom";
 
 const Register = () => {
   const [type_userList, setType_userList] = useState([]);
@@ -36,7 +34,7 @@ const Register = () => {
   
 }
 
-const reDirect = () => {
+const ReDirect = () => {
   setOpen(false);
   setRedirect(true);
   setValues({
@@ -46,13 +44,11 @@ const reDirect = () => {
     phone: "",
   });
   setuser_type();
-  if(isRedirect === true){
-    return (
-     <Redirect to='/login'  />
-    )
-    }
+  // if(isRedirect === true){
+  //     return <Redirect  to="/Login/"/>
+  //   }
   }
-}
+
   const [errors, setErrors] = useState({});
 
   const handleChange = (event) => {
@@ -80,7 +76,7 @@ const reDirect = () => {
             show={isOpen}
             title="Success!"
             confirmBtnBsStyle="success"
-            onConfirm={reDirect}>
+            onConfirm={ReDirect}>
             ลงทะเบียนเรียบร้อย
           </SweetAlert>
           <form
