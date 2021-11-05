@@ -2,9 +2,9 @@
 
 
 ## ดูข้อมูลทั้งหมด
-See the section about [running tests](http://localhost:3001/api/users/all)
+### http://localhost:3001/api/users/all
 ## ดูข้อมูลตาม id
-See the section about [running tests](http://localhost:3001/api/users/id)
+### http://localhost:3001/api/users/id
 
 
 # Getting Started with Create React App
