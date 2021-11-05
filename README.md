@@ -1,4 +1,4 @@
-# พิมพ์ node server.js ใน server เพื่อ รัน server port 3001
+# พิมพ์ node index.js ใน server เพื่อ รัน server port 3001
 
 
 ## ดูข้อมูลทั้งหมด
