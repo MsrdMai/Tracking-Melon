@@ -1,10 +1,12 @@
-# พิมพ์ node index.js ใน server เพื่อ รัน server port 3001
+# พิมพ์ node server.js เพื่อ รัน server port 3001
 
 
 ## ดูข้อมูลทั้งหมด
 ### http://localhost:3001/api/users/all
+### http://localhost:3001/api/type_user/all
 ## ดูข้อมูลตาม id
 ### http://localhost:3001/api/users/id
+### http://localhost:3001/api/type_user/id
 
 
 # Getting Started with Create React App

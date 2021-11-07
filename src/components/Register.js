@@ -17,14 +17,15 @@ const Register = () => {
     phone: "",
   });
 
-  Axios.get("http://localhost:3001/type_user").then((response) => {
+  Axios.get("/api/type_user/all").then((response) => {
     setType_userList(response.data);
   });
 
 
   const SaveRegister = (event) => {
 
-    Axios.post('http://localhost:3001/SaveRegister', {
+
+    Axios.post('/api/users/', {
     email: values.email,
     username:values.username, 
     password:values.password, 
