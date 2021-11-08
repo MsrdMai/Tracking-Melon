@@ -17,7 +17,7 @@ const Register = () => {
     phone: "",
   });
 
-  Axios.get("/api/type_user/all").then((response) => {
+  Axios.get('http://localhost:3001/api/type_user/all').then((response) => {
     setType_userList(response.data);
   });
 
@@ -25,7 +25,7 @@ const Register = () => {
   const SaveRegister = (event) => {
 
 
-    Axios.post('/api/users/', {
+    Axios.post('http://localhost:3001/api/users/', {
     email: values.email,
     username:values.username, 
     password:values.password, 
