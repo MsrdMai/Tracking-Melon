@@ -10,6 +10,16 @@ const Register = () => {
   const [user_type, setuser_type] = useState()
   const [isRedirect, setRedirect] = useState(false)
   const [isOpen, setOpen] = useState(false);
+  const [user, setUser] = useState({});
+
+  useEffect(() => {
+      setInterval(() => {
+          const userString = localStorage.getItem("token");
+          const user = JSON.parse(userString);
+          setUser(user);
+          }, [])
+      }, 5000);
+
   const [values, setValues] = useState({
     username: "",
     email: "",
@@ -45,9 +55,6 @@ const ReDirect = () => {
     phone: "",
   });
   setuser_type();
-  // if(isRedirect === true){
-  //     return <Redirect  to="/Login/"/>
-  //   }
   }
 
   const [errors, setErrors] = useState({});
@@ -65,11 +72,10 @@ const ReDirect = () => {
     setErrors(validationRegister(values));
   };
 
-
+  if (!user) {
   return (
     <div>
       <Topnav />
-
       <section className="App h-screen w-full flex justify-center items-center bg-yellow-200">
         <div className="w-full max-w-md">
             <SweetAlert
@@ -225,6 +231,9 @@ const ReDirect = () => {
       </section>
     </div>
   );
+};
+    if (user) {
+      return <Redirect to="/"/>};
 };
 
 export default Register;
