@@ -104,7 +104,7 @@ const ReDirect = () => {
                 type="email"
                 name="email"
                 id=""
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:text-green-600 leading-tight focus:outline-none focus:shadow-outline border-blue-300 "
                 placeholder="Johnbull@example.com"
                 onChange={handleChange}
                 value={values.email}
@@ -125,7 +125,7 @@ const ReDirect = () => {
                 type="text"
                 name="username"
                 id=""
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:text-green-600 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
                 placeholder="Enter your Username"
                 onChange={handleChange}
                 value={values.username}
@@ -146,7 +146,7 @@ const ReDirect = () => {
                 type="password"
                 name="password"
                 id=""
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:text-green-600 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
                 placeholder="Enter your password"
                 onChange={handleChange}
                 value={values.password}
@@ -167,7 +167,7 @@ const ReDirect = () => {
                 type="text"
                 name="phone"
                 id=""
-                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
+                className="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700 focus:text-green-600 leading-tight focus:outline-none focus:shadow-outline border-blue-300"
                 placeholder="Enter your phone"
                 onChange={handleChange}
                 value={values.phone}

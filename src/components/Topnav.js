@@ -85,20 +85,21 @@ function Navigations() {
         
         <t></t>Tracking Melon
       </Navbar.Brand>
-      <Navbar.Toggle aria-controls="basic-navbar-nav" />
+      <Navbar.Toggle aria-controls="basic-navbar-nav " style={{  marginLeft:"20px",marginRight:"20px"}}/>
       <Navbar.Collapse id="basic-navbar-nav">
-        <Nav justified className="ml-auto">
-          <Nav.Link href="/">รายการขาย</Nav.Link>
+        <Nav justified className="ml-auto ">
+          <Nav.Link style={{  marginLeft:"20px",marginRight:"20px"}} href="/">รายการขาย</Nav.Link>
           <Nav.Link href=""></Nav.Link>
 
-          <Nav.Link href="/">รายการจอง</Nav.Link>
+          <Nav.Link style={{  marginLeft:"20px",marginRight:"20px"}} href="/">รายการจอง</Nav.Link>
           <Nav.Link href=""></Nav.Link>
 
-          <Nav.Link href="/">ฟาร์ม</Nav.Link>
+          <Nav.Link style={{  marginLeft:"20px",marginRight:"20px"}} href="/">ฟาร์ม</Nav.Link>
           <Nav.Link href=""></Nav.Link>
 
               <a
                 class="btn btn-light my-2 my-sm-0 btn-lg btn-block  bg-red-400 text-white"
+                style={{  marginLeft:"20px",marginRight:"20px"}}
                 href="/"
                 onClick={() => { localStorage.removeItem("token"); }} 
               >
