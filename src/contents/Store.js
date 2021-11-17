@@ -8,6 +8,7 @@ import farm from "../assets/farm.png";
 import order from "../assets/order.png";
 import product from "../assets/product.png";
 import reviews from "../assets/reviews.png";
+import test from "../assets/test.jpg";
 
 class Store extends Component {
   render() {
@@ -46,19 +47,17 @@ class Store extends Component {
               <br></br>
               <div class="row">
                 <div class="col" style={{ marginLeft: "5px" }}>
-        
                   <img
                     src={Img}
                     style={{
                       display: "block",
                       borderRadius: "0%",
-                      boxShadow: "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+                      boxShadow:
+                        "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
                       maxWidth: "320px",
                       maxHeight: "300px",
                     }}
                   ></img>
-                  
-                  
                 </div>
                 <div class="col">
                   <p class="text-4xl text-green-600 font-black border-2 border-green-200">
@@ -69,6 +68,7 @@ class Store extends Component {
                     รายการสินค้า : 356 <br></br>
                     ที่ขายได้ : 1118<br></br>
                     จังหวัด : เชียงราย<br></br>
+                    เบอร์: 092 569 4791 <br></br>
                     คะแนน : 4.8 (การให้คะแนนทั้งหมด 23)
                   </p>
 
@@ -191,37 +191,52 @@ class Store extends Component {
               </p>
               <br></br>
               <div class="row">
-              <div class="col"
-              >
-                <div className="google-map-code border-5 border-green-200">
-                  <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d15282225.79979123!2d73.7250245393691!3d20.750301298393563!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x30635ff06b92b791%3A0xd78c4fa1854213a6!2sIndia!5e0!3m2!1sen!2sin!4v1587818542745!5m2!1sen!2sin"
-                    width="320"
-                    height="400"
-                    frameborder="0"
-                    style={{ border: 0 }}
-                    tabindex="0"
-                  ></iframe>
+                <div class="col">
+                  
+                  <img
+                    src={test}
+                    style={{
+                      display: "block",
+                      borderRadius: "0%",
+                      boxShadow:
+                        "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+                      Width: "100%",
+                      Height: "100%",
+                    }}
+                  ></img>
+                  <br></br>
                 </div>
+
+                <div class="col">
+                  <br></br>
+                  <br></br>
+                  <br></br>
+                  <p
+                    class="pt-3 text-xl font-black"
+                    style={{
+                      alignItems: "center",
+                      textAlign: "center",
+                      marginLeft: "50px",
+                      marginRight: "50px",
+                    }}
+                  >
+                    "
+                    เป็นสถานที่ท่องเที่ยวเชิงเกษตรที่เน้นปลูกและปรับปรุงพืชสายพันธุ์พิเศษหายากจากทั่วโลก
+                    ใช้เทคนิคการดูแลในระบบโรงเรือนเทคโนโลยีจากต่างงประเทศ
+                    สายทัวร์เที่ยวชมโรงเรือนได้ที่นี่ และสามารถชิมเมล่อนสดๆ
+                    จากฟาร์มได้อีกด้วย, Coro Garden
+                    พื้นที่กิจกรรมลองปลูกต้นไม้และสามารถเก็บผลผลิตได้ด้วยตัวเอง
+                    สุดท้าย Coro Me จุดสร้างสรรค์กิจกรรม DIY
+                    กับต้นไม้หลากสายพันธุ์ทั้ง บอนไซ ต้นไม้มงคล
+                    และยังมีอีกหลากหลายกิจกรรมให้ได้ร่วมสนุกกัน
+                    ใครหาที่พักวันหยุดแบบเชิงเกษตรแถมถ่ายรูปสวยก็แวะไปชิลล์กันได้นะ
+                    "
+                  </p>
+                  <br></br>
+                </div>
+
                 <br></br>
               </div>
-
-              <div class="col">
-              <br></br><br></br><br></br>
-              <p class="pt-3 text-2xl font-black"
-               style={{
-              alignItems: "center",
-              textAlign: "center",
-              marginLeft: "20px",
-              marginRight: "20px",
-              }} >
-                "เมล่อนนนน ฟาร์มของเราใส่ใจ พร้อมถึงมือคุณ คุณภาพดี ราคาคุณภาพ ฟาร์ม เมล่อน ฟาร์ม เมล่อน คลองสาม ฟาร์มผักออแกนิก ฟาร์มปทุมธานี ... เก็บสดๆ จากฟาร์มที่อยู่ภายในพื้นที่ร้าน นำมาปรุงประกอบเป็นสารพัดเมนู"
-              </p>
-              <br></br>
-              </div>
-              
-              <br></br>
-            </div>
             </div>
             <br></br>
             <br></br>
