@@ -5,7 +5,7 @@ import Topnav from "../components/Topnav";
 import bgImg from "../assets/bg.jpg";
 
 
-class Order extends Component {
+class OrderFarm extends Component {
   render() {
     return (
       <div>
@@ -21,11 +21,29 @@ class Order extends Component {
           }}
         >
             <FarmerTab/>
+            <br></br>
+          <div
+            class="container"
+            style={{
+              backgroundColor: "white",
+              borderRadius: "10px",
+              alignItems: "center",
+              textAlign: "center",
+            }}
+          >
+            <p class="pt-5 text-4xl text-green-600 font-black ">OrderFarm</p>
+            <br></br>
+            <div class="row">
+              <div class="col"></div>
+              <br></br>
+            </div>
+          </div>
 
+          <br></br>
             </div>
         </div>
 
     );
   }
 }
-export default Order;
+export default OrderFarm;

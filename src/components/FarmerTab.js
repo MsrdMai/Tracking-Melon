@@ -104,7 +104,7 @@ class FarmerTab extends Component {
               >
                 <a
                   class=" col-sm-3 bg-green-700 font-bold text-gray-100 btn-lg btn-block border  border-transparent rounded hover:bg-white border-5 border-green-700 hover:text-green-700"
-                  href=""
+                  href="/Store"
                 >
                   <img
                     src={farm}
@@ -118,7 +118,7 @@ class FarmerTab extends Component {
 
                 <a
                   class=" col-sm-3 bg-green-700 font-bold text-gray-100 btn-lg btn-block border  border-transparent rounded hover:bg-white border-5 border-green-700 hover:text-green-700"
-                  href=""
+                  href="/ProductFarm"
                 >
                   <img
                     src={product}
@@ -132,7 +132,7 @@ class FarmerTab extends Component {
 
                 <a
                   class=" col-sm-3 bg-green-700 font-bold text-gray-100 btn-lg btn-block border  border-transparent rounded hover:bg-white border-5 border-green-700 hover:text-green-700"
-                  href="/Order"
+                  href="/OrderFarm"
                 >
                   <img
                     src={order}
@@ -146,7 +146,7 @@ class FarmerTab extends Component {
 
                 <a
                   class=" col-sm-3 bg-green-700 font-bold text-gray-100 btn-lg btn-block border  border-transparent rounded hover:bg-white border-5 border-green-700 hover:text-green-700"
-                  href=""
+                  href="/ReviewFarm"
                 >
                   <img
                     src={reviews}
