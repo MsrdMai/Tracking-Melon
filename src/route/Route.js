@@ -5,6 +5,7 @@ import Login from '../components/Login';
 import Register from '../components/Register';
 import Product from '../contents/Product';
 import Store from '../contents/Store';
+import Order from '../contents/Order';
 class Routing extends Component {
     render() {
         return (
@@ -16,6 +17,7 @@ class Routing extends Component {
                     <Route exact path={"/Register"} component={Register} />
                     <Route exact path={"/Product"} component={Product} />
                     <Route exact path={"/Store"} component={Store} />
+                    <Route exact path={"/Order"} component={Order} />
         
                 </Router>
             </div>
