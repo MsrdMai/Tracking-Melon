@@ -191,7 +191,7 @@ class Store extends Component {
               </p>
               <br></br>
               <div class="row">
-                <div class="col">
+                <div class="col-sm-6 col-md-6">
                   
                   <img
                     src={test}
@@ -207,7 +207,7 @@ class Store extends Component {
                   <br></br>
                 </div>
 
-                <div class="col">
+                <div class="col-sm-6 col-md-6">
                   <br></br>
                   <br></br>
                   <br></br>
