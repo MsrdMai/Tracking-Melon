@@ -1,12 +1,14 @@
 import React, { useState } from "react";
 import Topnav from "../components/Topnav";
+import ProductList from "../components/ProductList";
 import Axios from "axios";
 import SweetAlert from "react-bootstrap-sweetalert";
 
 const Product = () => {
-   return (
+  return (
     <div>
-      <Topnav/>
+      <Topnav />
+      <ProductList />
     </div>
   );
 };
