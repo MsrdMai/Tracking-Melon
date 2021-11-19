@@ -15,7 +15,7 @@ class Routing extends Component {
                 <Router>
                     
                     <Route exact path={"/"} component={Home} />
-                    <Route exact  path={"/Login"} component={Login} />
+                    <Route exact path={"/Login"} component={Login} />
                     <Route exact path={"/Register"} component={Register} />
                     <Route exact path={"/Product"} component={Product} />
                     <Route exact path={"/Store"} component={Store} />

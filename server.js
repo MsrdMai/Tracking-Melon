@@ -2,7 +2,6 @@ const express = require('express');
 const app = express();
 const mysql = require('mysql');
 const cors = require('cors');
-// app.use(cors());
 app.use(express.json());
 
 var corsOptions = {
@@ -10,6 +9,7 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
+app.use(bodyParser.json())
 
 // simple route
 app.get("/", (req, res) => {
@@ -28,6 +28,7 @@ app.use(express.urlencoded({limit: '50mb', extended: true}));
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+  
   next();
 });
 

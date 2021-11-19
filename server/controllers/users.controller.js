@@ -90,3 +90,23 @@ exports.deleteAll = (req, res) => {
 exports.findAllPublished = (req, res) => {
   res.json({ 'test': 'findAllPublished' });
 };
+
+exports.loginUser = async function(req, res) {
+  const { username, password } = req.body;
+  let result = await User.findOne({ username });
+
+  if (result){
+    if (result.password == password){
+      res.json({message: "Successful login!"});
+      // res.send(result);
+    } else {
+      res.status(200).send({
+         message: "Password incorrect!"
+      })
+    }
+  } 
+  else {
+    res.status(200).send({
+      message: "Username not found!"
+  })}
+};

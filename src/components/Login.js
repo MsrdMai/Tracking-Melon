@@ -3,7 +3,7 @@ import Topnav from "../components/Topnav";
 import Axios from "axios";
 import SweetAlert from "react-bootstrap-sweetalert";
 import PropTypes from 'prop-types';
-import { Redirect } from "react-router-dom";
+import { Redirect, Link } from "react-router-dom";
 import axios from "axios";
 
 async function loginUser(credentials) {
@@ -17,17 +17,46 @@ async function loginUser(credentials) {
     .then(data => data.json())
 }
 
+
+
+
 const Login = ({ setToken }) => {
   const [username, setUserName] = useState();
   const [password, setPassword] = useState();
   const [user, setUser] = useState({});
 
+  //   useEffect(() => {
+  //     setInterval(() => {
+  //     if (localStorage.getItem("token")){
+  //       const userString = localStorage.getItem("token");
+  //       const user = JSON.parse(userString);
+  //       setUser(user);
+  //     }
+  //   }, [])
+  // }, 5000);
+      
   const handleSubmit = async e => {
     e.preventDefault();
+
+    var item = {username, password}
+    let result = await fetch('http://localhost:3001/api/users/all', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        "Accept" : 'application/json'
+      },
+      body: JSON.stringify(item)
+    })
+    result = await result.json();
+    localStorage.setItem("token", JSON.stringify(result));
+  
+  
+
     const response = await loginUser({
       username,
       password
     });
+
     if ("token" in response){
       localStorage.setItem("token", response.token);
     }
