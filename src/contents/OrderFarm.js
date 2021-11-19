@@ -35,11 +35,6 @@ class OrderFarm extends Component {
               textAlign: "center",
             }}
           >
-
-
-
-
-            
             <p class="pt-5 text-4xl text-green-600 font-black items-center	">
               OrderFarm (รูปสินค้า)
             </p>
