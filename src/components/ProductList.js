@@ -41,7 +41,7 @@ class ProductList extends Component {
               <div class="row grid grid-cols-3 gap-4 flex justify-center">
               <div class="pt-4 px-4 pb-2 max-w-xs bg-white rounded-lg shadow-md">
                   <img
-                    class="block mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
+                    class="block object-scale-down mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
                     src={meron2}
                     alt="Product"
                   />
@@ -67,7 +67,7 @@ class ProductList extends Component {
 
                 <div class="pt-4 px-4 pb-2 max-w-xs bg-white rounded-lg shadow-md">
                   <img
-                    class="block mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
+                    class="block object-scale-down mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
                     src={meron2}
                     alt="Product"
                   />
@@ -93,7 +93,7 @@ class ProductList extends Component {
 
                 <div class="pt-4 px-4 pb-2 max-w-xs bg-white rounded-lg shadow-md">
                   <img
-                    class="block mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
+                    class="block object-scale-down mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
                     src={meron2}
                     alt="Product"
                   />
@@ -119,7 +119,7 @@ class ProductList extends Component {
 
                 <div class="pt-4 px-4 pb-2 max-w-xs bg-white rounded-lg shadow-md">
                   <img
-                    class="block mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
+                    class="block object-scale-down mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
                     src={meron2}
                     alt="Product"
                   />
@@ -145,7 +145,7 @@ class ProductList extends Component {
 
                 <div class="pt-4 px-4 pb-2 max-w-xs bg-white rounded-lg shadow-md">
                   <img
-                    class="block mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
+                    class="block object-scale-down mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
                     src={meron2}
                     alt="Product"
                   />
@@ -171,7 +171,7 @@ class ProductList extends Component {
 
                 <div class="pt-4 px-4 pb-2 max-w-xs bg-white rounded-lg shadow-md">
                   <img
-                    class="block mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
+                    class="block object-scale-down mx-auto h-48 rounded-lg sm:mx-0 sm:flex-shrink-0"
                     src={meron2}
                     alt="Product"
                   />

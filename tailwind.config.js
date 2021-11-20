@@ -3,7 +3,9 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
     extend: {
-
+      backgroundImage: {
+        bgImg: "url('/assets/bg.jpg')",
+       }
     },
     fontFamily: {
       'sans':'Kanit, sans-serif',
@@ -11,7 +13,7 @@ module.exports = {
   },
   variants: {
     extend: {
-      animation: ['motion-safe'],
+      
     },
   },
   plugins: [],
