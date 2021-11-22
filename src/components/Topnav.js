@@ -20,7 +20,7 @@ function Navigations() {
   if (!user) {
 
     return (
-      <Navbar
+      <Navbar 
         defaultActiveKey="/Product"
         collapseOnSelect
         toggleable="lg"

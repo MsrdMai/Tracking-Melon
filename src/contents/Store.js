@@ -36,6 +36,7 @@ class Store extends Component {
               <p class="pt-5 text-4xl text-green-600 font-black ">
                 เกี่ยวกับฟาร์ม
               </p>
+              <hr></hr>
               <br></br>
               <div class="row">
                 <div class="col-sm-6 col-md-6">
