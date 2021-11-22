@@ -8,7 +8,7 @@ import load from "../assets/load.png";
 import box from "../assets/box.png";
 import cancel from "../assets/cancel.png";
 import harvest from "../assets/harvest.png";
-
+import machita from "../assets/melon/machita.jpg";
 class OrderFarm extends Component {
   render() {
     return (
@@ -31,53 +31,109 @@ class OrderFarm extends Component {
             style={{
               backgroundColor: "white",
               borderRadius: "10px",
-              // alignItems: "center",
               textAlign: "center",
             }}
           >
-            <p class="pt-5 text-4xl text-green-600 font-black items-center	">
-              OrderFarm (รูปสินค้า)
-            </p>
-          
+            <div class="row border border-indigo-600">
+              <div class="col-lg-1"></div>
+              <div class="col-lg-4">
+                <img
+                  src={machita}
+                  style={{
+                    Width: "100%",
+                    Height: "100%",
+                    alignItems: "center",
+                  }}
+                ></img>
+              </div>
+              <div class="col-lg-1"></div>
+              <div class="col-lg-5 col-12">
+                <br></br>
+                <div class="row">
+                  <div class="col">
+                    <p class="text-3xl text-red-800 font-black items-center">
+                      คูนามิบรรจุกล่อง
+                    </p>
+                  </div>
+                  <div class="col">
+                    <p class=" text-2xl text-green-800 font-black items-center border-4 border-green-800">
+                      แกะสลัก
+                    </p>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col">
+                    <br></br>
+                    <p class="text-xl text-gray-800 text-left">ขนาด : 1.5 kg</p>
+                    <br></br>
+                    <p class="text-lg text-gray-800 text-left">เนื้อ : ส้ม</p>
+                    <br></br>
+                    <p class="text-lg text-gray-800 text-left">
+                      จำนวนในคลัง : 5
+                    </p>
+                  </div>
+                  <div class="col">
+                    <br></br>
+                    <p class="text-lg text-gray-800 text-left">
+                      คุณภาพ : รอการเติบโต
+                    </p>
+                    <br></br>
+                    <p class="text-lg text-gray-800 text-left">ราคา : 450 ฿</p>
+                    <br></br>
+                    <p class="text-lg text-gray-800 text-left">
+                      รอบตัด : 5/9/64
+                    </p>
+                  </div>
+                </div>
+                <div class="col">
+                  <p class="pt-3 text-lg text-gray-800 text-left">
+                    รายละเอียดสินค้า : เนื้อส้ม ลายชัดเจน นูนหนา เนื้อฉ่ำ
+                    หวานหอม จากฟาร์มออลแกรนิต
+                  </p>
+                </div>
+              </div>
+              <div class="col-lg-1"></div>
+            </div>
+            <br></br>
             <br></br>
 
- <form>
- <div class="form-group">
-   <div class="row">
-   <div class="col-lg-1">
-            </div>
-              <div class="col-lg-4 col-12">
-                
-                <input
-                  type="text"
-                  class="form-control"
-                  id="exampleFormControlInput1"
-                  placeholder="ค้นหา Username"
-                />
-              </div>
-              <div class="col-lg-4 col-12">
-                <select class="form-select" aria-label="Default select example">
-                  <option selected>เลือกสถานะสินค้า</option>
-                  <option value="1">รอชำระเงิน</option>
-                  <option value="2">รอยืนยันคำสั่งซื้อ</option>
-                  <option value="3">เตรียมส่งสินค้า</option>
-                </select>
-                </div>
-                <div class="col-lg-2 col-12">
-                <button type="submit" class="btn btn-primary col-12">ค้นหา</button>
-
-                </div>
-                <div class="col-lg-1">
-            </div>
+            <form>
+              <div class="form-group">
+                <div class="row">
+                  <div class="col-lg-1"></div>
+                  <div class="col-lg-4 col-12">
+                    <input
+                      type="text"
+                      class="form-control"
+                      id="exampleFormControlInput1"
+                      placeholder="ค้นหา Username"
+                    />
+                  </div>
+                  <div class="col-lg-4 col-12">
+                    <select
+                      class="form-select"
+                      aria-label="Default select example"
+                    >
+                      <option selected>เลือกสถานะสินค้า</option>
+                      <option value="1">รอชำระเงิน</option>
+                      <option value="2">รอยืนยันคำสั่งซื้อ</option>
+                      <option value="3">เตรียมส่งสินค้า</option>
+                    </select>
+                  </div>
+                  <div class="col-lg-2 col-12">
+                    <button type="submit" class="btn btn-primary col-12">
+                      ค้นหา
+                    </button>
+                  </div>
+                  <div class="col-lg-1"></div>
                 </div>
               </div>
             </form>
             <br></br>
-           
+
             <br></br>
             <div class="row">
-            <div class="col-1">
-            </div>
+              <div class="col-1"></div>
               <div class="col-lg-10 ">
                 <table class="table table-bordered border-dark">
                   <thead></thead>

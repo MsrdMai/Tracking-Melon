@@ -9,7 +9,6 @@ var corsOptions = {
 };
 
 app.use(cors(corsOptions));
-app.use(bodyParser.json())
 
 // simple route
 app.get("/", (req, res) => {
