@@ -8,7 +8,10 @@ import load from "../assets/load.png";
 import box from "../assets/box.png";
 import cancel from "../assets/cancel.png";
 import harvest from "../assets/harvest.png";
+import report from "../assets/report.png";
 import machita from "../assets/melon/machita.jpg";
+import muku from "../assets/melon/muku.jpg";
+
 class OrderList extends Component {
   render() {
     return (
@@ -38,8 +41,8 @@ class OrderList extends Component {
             <div class="row border border-indigo-600">
               <div class="col-lg-1"></div>
               <div class="col-lg-4">
-              <br></br>
-              <br></br>
+                <br></br>
+                <br></br>
                 <img
                   src={machita}
                   style={{
@@ -163,8 +166,19 @@ class OrderList extends Component {
                               เบอร์โทร : 0123456789 <br></br>
                               อีเมล : tester@test.com <br></br>
                               ที่อยู่จัดส่ง : 1 ลาดกระบัง <br></br>
+                              รายละเอียด : แกะไม่จำเป็นต้องเหมือนมาก
+                              ของลายไม่คดมาก<br></br>
                             </p>
                             <br></br>
+
+                            <img
+                              src={muku}
+                              style={{
+                                maxWidth: "300px",
+                                maxHeight: "300px",
+                                alignItems: "center",
+                              }}
+                            ></img>
                           </div>
                           <div class="col-sm-2 col-md-6">
                             <p class="text-2xl font-black bg-green-200 rounded-full py-3 px-6">
@@ -192,8 +206,25 @@ class OrderList extends Component {
                                 display: "inline-block",
                                 padding: "5px",
                                 margin: "5px",
+                                alignItems: "center",
                               }}
                             ></img>
+                            <br></br>
+
+                            <a
+                              class="col-7 btn border-2 border-green-500 bg-gray-50 text-red-500 hover:border-2 hover:border-red-500 hover:text-green-500 rounded-full py-3 px-6"
+                              href=""
+                            >
+                              <img
+                                src={report}
+                                width="30"
+                                height="30"
+                                style={{
+                                  display: "inline-block",
+                                }}
+                              />
+                              รายงานผลผลิต
+                            </a>
                           </div>
 
                           <div class="col">
@@ -212,7 +243,7 @@ class OrderList extends Component {
                               แจ้งเลขพัสดุ
                             </a>
                             <a
-                              class="col-12   btn btn-light btn-lg btn-block bg-gray-300 text-red-900 hover:border-2 hover:border-red-500 hover:text-red-500"
+                              class="col-12 btn btn-light btn-lg btn-block bg-gray-300 text-red-900 hover:border-2 hover:border-red-500 hover:text-red-500"
                               href=""
                             >
                               <img
