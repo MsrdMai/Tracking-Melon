@@ -38,6 +38,21 @@ class Store extends Component {
               </p>
               <hr></hr>
               <br></br>
+              
+              <center>
+              <iframe
+              src="https://maps.google.com/maps?q=13.5964038, 100.6003519&z=15&output=embed"
+              width="600px"
+              height="450px"
+              frameBorder="0"
+              style={{ border: 0 }}
+              allowFullScreen=""
+              aria-hidden="false"
+              tabIndex="0"
+            />
+          </center>
+          <br></br> <br></br> <br></br>
+
               <div class="row">
                 <div class="col-sm-6 col-md-6">
                   
@@ -48,8 +63,8 @@ class Store extends Component {
                       borderRadius: "0%",
                       boxShadow:
                         "0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
-                      Width: "100%",
-                      Height: "100%",
+                      Width: "500px",
+                      Height: "500px",
                     }}
                   ></img>
                   <br></br>
